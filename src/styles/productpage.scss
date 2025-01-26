@@ -1,0 +1,206 @@
+@import "./config.scss";
+
+.product-page-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 100vh;
+  gap: 100px;
+  .col {
+    height: 100%;
+  }
+  .col-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 60%;
+    .related-images {
+      width: 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .rel {
+        background-size: cover;
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .main-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain; /* Ensures the image fits within the container */
+      max-height: 100%; /* Prevents image from exceeding max height */
+      transition: opacity 0.3s ease;
+    }
+  }
+  .col-2 {
+    width: 40%;
+    .col-2-inner-cover {
+      width: fit-content;
+      .sizes {
+        .sizes-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          .size {
+            width: 70px;
+            border: 3px solid black;
+            color: black;
+            height: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: 0.3s;
+            &:hover {
+              color: white;
+              background-color: black;
+            }
+          }
+        }
+      }
+      .colors {
+        .colors-container {
+          display: flex;
+          gap: 5px;
+          .color {
+            width: 35px;
+            height: 35px;
+          }
+          .c-1 {
+            background-color: red;
+          }
+          .c-2 {
+            background-color: green;
+          }
+          .c-3 {
+            background-color: blue;
+          }
+          .c-4 {
+            background-color: yellow;
+          }
+        }
+      }
+      .product-content {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        height: 60%;
+        align-items: flex-start;
+        gap: 20px;
+        .description {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .desc {
+            margin-top: 30px;
+            width: 60%;
+          }
+        }
+      }
+      .row {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.selected-size {
+  color: white !important;
+  background-color: black;
+}
+
+.selected-capacity {
+  color: white !important;
+  background-color: black !important;
+}
+
+.selected-color {
+  border: 3px solid $color-green !important;
+}
+
+.capacity-item {
+  width: 40px !important;
+}
+
+.radio-box {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+}
+.selected-radio-box {
+  color: white !important;
+  background-color: black !important;
+}
+.cover-slider-image {
+  width: 100%;
+  height: 120px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.slider-container {
+  display: flex;
+  // width: 100%;
+  // max-width: 800px;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+  // align-items: flex-start;
+  // justify-content: center;
+  .con {
+    height: 100%;
+    // height: 100px;
+    .swiper-slide {
+      // height: 150px !important;
+    }
+  }
+  .con-1 {
+    width: 15%;
+  }
+  .con-2 {
+    width: 85%;
+  }
+}
+
+.out-of-stock {
+  z-index: 100;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: white;
+  display: flex;
+  width: 100px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 4px;
+  color: red;
+  border: 1px solid red;
+}

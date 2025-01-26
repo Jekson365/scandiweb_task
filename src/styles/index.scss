@@ -1,0 +1,100 @@
+@import "./config.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", serif;
+}
+body {
+  overflow-x: hidden;
+}
+.cover {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: "";
+}
+.swiper-button-prev {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  width:30px;
+  height:30px;
+  background-color: black;
+  background-image: url('../../assets/arrow-left-svgrepo-com.svg');
+}
+.swiper-button-next {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  width:30px;
+  height:30px;
+  background-color: black;
+  background-image: url('../../assets/arrow-left-svgrepo-com\ \(1\).svg');
+}
+
+
+.p-r {
+  position: relative;
+}
+.mt-medium {
+  margin-top: 20px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.add-cart-gray {
+  background-color: gray !important;
+}
+.d-none {
+  display: none;
+}
+.p-medium {
+  padding: 10px;
+}
+.custom-button {
+  text-transform: uppercase;
+  max-width: 350px;
+  width: 100%;
+  border: 0;
+  color: white;
+  outline: 0;
+  height: 50px;
+  background-color: $color-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order-button {
+  width: 100%;
+  height: 70px;
+  background-color: $color-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+}
+.align-center {
+  align-items: center !important;
+}
+.overlay-on {
+  display: block !important;
+}
+.overlay {
+  border: 1px solid red;
+  position: absolute;
+  z-index: 1000000;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.out-stock-image {
+  filter: grayscale(100%);
+}
